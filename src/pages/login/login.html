@@ -1,0 +1,34 @@
+<ion-content padding>
+  <div class="content">
+    <div class="logo">
+      <img src="../assets/img/logo1.png">
+    </div>
+    <div class="inputs">
+      <form (submit)="doLogin(loginForm)" action="" method="post" #loginForm="ngForm">
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>Username</ion-label>
+            <ion-input type="text" ngControl="username" [(ngModel)]="login.username" name="username" required #username="ngModel"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="password" ngControl="password" [(ngModel)]="login.password" required name="password" #password="ngModel"></ion-input>
+          </ion-item>
+        </ion-list>
+        <div class="error">
+          <div *ngIf="loginForm._submitted && username.errors?.required">* Username Required</div>
+          <div *ngIf="loginForm._submitted && password.errors?.required">* Password Required</div>
+        </div>
+        <div class="button-div">
+          <button type="submit" ion-button icon-right color="secondary" [disabled]="!loginForm.form.valid">
+            Sign In
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </div>{{this.pages}}d
+      </form>
+      <div class="register-div">
+        <a (click)="openPage('RegisterPage')">Register Here</a>
+      </div>
+    </div>
+  </div>
+</ion-content>
