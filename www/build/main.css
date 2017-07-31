@@ -25254,6 +25254,33 @@ page-login .register-div a {
   color: #fff;
 }
 
-page-register * {
-  background: #fff;
+page-register .content {
+  background: #193670;
+  color: #fff;
+}
+
+page-register .inputs {
+  margin-top: 50px;
+}
+
+page-register .input-file {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border-radius: 100px;
+  padding: 0;
+}
+
+page-register .input-file img {
+  width: 100%;
+  height: 100%;
+  margin-top: 4px;
+}
+
+page-register .input-file.item-ios.item-block .item-inner, page-register .input-file.item-md.item-block .item-inner {
+  padding-right: 0px;
+}
+
+page-register .input-file .label-ios, page-register .input-file .label-md {
+  margin: 0;
 }

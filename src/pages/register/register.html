@@ -1,3 +1,13 @@
 <ion-content padding>
-asdmsalml;{{id}}
+	<div class="content">
+		<div class="inputs">
+      <form (submit)="doLogin(loginForm)" action="" method="post" #loginForm="ngForm">
+      	<ion-list>
+          <ion-item class="input-file" (click)="showAction()">
+            <img src="assets/img/user.png">
+          </ion-item>
+        </ion-list>
+      </form>
+    </div>
+	</div>
 </ion-content>
